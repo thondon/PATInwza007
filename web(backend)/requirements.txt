@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+bcrypt
+librosa
+numpy
+scipy
+soundfile
+typing-extensions

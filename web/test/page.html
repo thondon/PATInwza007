@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../theme.js"></script>
+    <link rel="stylesheet" href="/navbar.css">
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="#" class="special">STPA-AI</a></li>
+            <div class="center">
+                <li class="hide"><a href="/setting.html" class="change">ตั้งค่า</a></li>
+                <li class="hide"><a href="../content.html" class="change">ฝึกฝน</a></li>
+                <li class="hide"><a href="#" class="change">API's</a></li>
+            </div>
+            <li id="sun"><a href="#" class="hide"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path
+                            d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+                    </svg></a></li>
+            <li class="menubtn"><a href="#" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="undernav">
+        <div class="icon" onclick="history.back()">
+            <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="Vector"
+                        d="M15 6L9.7071 11.2929C9.3738 11.6262 9.2071 11.7929 9.2071 12C9.2071 12.2071 9.3738 12.3738 9.7071 12.7071L15 18"
+                        stroke="#2A353D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a href="#" class="back">ย้อนกลับ</a>
+        </div>
+
+
+        <div class="pack">
+            <a href="../content.html" id="nav-test">บทช่วยสอน</a>
+            <a href="page.html" id="nav-page">ฝึกฝน</a>
+            <a href="result.html">ดูผลลัพธ์</a>
+        </div>
+    </div>
+
+<!-- 
+    <div class="upload">
+        <button class="fileinput"><img src="/picture/Group.png" alt="">
+            <p>upload sound</p>
+        </button>
+        <input type="file" style="display: none;" class="file">
+        <img src="/picture/Line 1.png" alt="">
+        <img src="/picture/Cap.png" alt="" class="cap">
+    </div> -->
+
+
+    <div class="all">
+        <p id="log"></p>
+        <h1>No Input here</h1>
+        <h2>Start record sound now, Click start record!</h2>
+        <button class="Soundinput" id="startBtn" type="button">Start Record Sound</button>
+        <button class="Soundinput" id="stopBtn" style="display: none;" type="button">Stop Record Sound</button>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="container">
+            <header>ขอแสดงความยินดี !</header>
+            <h2>คุณได้คะแนน</h2>
+            <p id="point"></p>
+            <p id="messager"></p>
+            <p class="callback">คุณมี <span id="check"></span> ที่ควรปรับปรุง</p>
+            <div class="button-wrapper">
+                <button class="btn-main" type="button"> <a href="deepresult.html">ดูผลการวิเคราะห์เชิงลึก</a> </button>
+                <button class="btn-ic" type="button"> <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="link-square">
+                        <path id="Vector"
+                            d="M11.1002 3C7.45057 3.00657 5.53942 3.09617 4.31806 4.31754C3 5.63559 3 7.75698 3 11.9997C3 16.2425 3 18.3639 4.31806 19.6819C5.63611 21 7.7575 21 12.0003 21C16.243 21 18.3644 21 19.6825 19.6819C20.9038 18.4606 20.9934 16.5494 21 12.8998"
+                            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path id="Vector_2"
+                            d="M21.0713 4.0315C21.3649 3.73926 21.3659 3.26439 21.0737 2.97085C20.7814 2.6773 20.3066 2.67625 20.013 2.9685L21.0713 4.0315ZM10.4708 12.4685C10.1773 12.7607 10.1763 13.2356 10.4685 13.5292C10.7607 13.8227 11.2356 13.8237 11.5292 13.5315L10.4708 12.4685ZM15.9999 2.25C15.5857 2.25004 15.25 2.58585 15.25 3.00007C15.2501 3.41428 15.5859 3.75004 16.0001 3.75L15.9999 2.25ZM20.25 8C20.25 8.41421 20.5858 8.75 21 8.75C21.4142 8.75 21.75 8.41421 21.75 8H20.25ZM20.013 2.9685L10.4708 12.4685L11.5292 13.5315L21.0713 4.0315L20.013 2.9685ZM20.1593 2.48855C19.4584 2.36443 18.4016 2.30696 17.5581 2.27871C17.1282 2.26432 16.7396 2.25715 16.4585 2.25357C16.3179 2.25179 16.2038 2.25089 16.1247 2.25045C16.0851 2.25022 16.0543 2.25011 16.0331 2.25006C16.0226 2.25003 16.0144 2.25001 16.0089 2.25001C16.0061 2.25 16.0039 2.25 16.0024 2.25C16.0017 2.25 16.0003 2.25 15.9999 2.25C15.9999 2.25 15.9999 2.25 16 3C16.0001 3.75 16.0001 3.75 16.0001 3.75H16.0016C16.0027 3.75 16.0046 3.75 16.007 3.75001C16.0119 3.75001 16.0193 3.75002 16.0292 3.75005C16.0489 3.7501 16.0782 3.75021 16.1162 3.75042C16.1922 3.75085 16.3027 3.75171 16.4394 3.75345C16.7131 3.75694 17.091 3.76391 17.5079 3.77787C18.3577 3.80633 19.3151 3.86239 19.8977 3.96557L20.1593 2.48855ZM21 8C21.75 8 21.75 8.00005 21.75 8C21.75 7.99958 21.75 7.99826 21.75 7.99752C21.75 7.99603 21.75 7.99388 21.75 7.99109C21.75 7.98552 21.75 7.97739 21.75 7.96683C21.7499 7.9457 21.7498 7.91483 21.7496 7.87526C21.7491 7.79614 21.7482 7.68213 21.7464 7.54148C21.7428 7.2604 21.7356 6.87182 21.7212 6.44203C21.6929 5.59857 21.6355 4.54186 21.5115 3.84109L20.0344 4.1024C20.1375 4.68506 20.1936 5.64247 20.2221 6.49229C20.236 6.90913 20.243 7.28697 20.2465 7.56066C20.2483 7.69739 20.2491 7.80784 20.2496 7.88384C20.2498 7.92183 20.2499 7.95119 20.25 7.9709V7.99308V7.9985V8C20.25 7.99999 20.25 8 21 8ZM19.8977 3.96557C19.9482 3.97451 19.9757 3.99342 19.9911 4.00887C20.0065 4.02432 20.0255 4.05182 20.0344 4.1024L21.5115 3.84109C21.3874 3.13972 20.8609 2.6128 20.1593 2.48855L19.8977 3.96557Z"
+                            fill="white" />
+                    </g>
+                </svg></a>
+                </button>
+            </div>
+            <button class="btn-close" type="button">ปิด</button>
+         
+        </div>
+    </div>
+
+
+    <nav>
+        <ul class="sidebar">
+            <li><a href="#" onclick="hidesidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <div class="center">
+                <li><a href="/setting.html" class="change">ตั้งค่า</a></li>
+                <li><a href="../content.html" class="change">ฝึกฝน</a></li>
+                <li><a href="#" class="change">API's</a></li>
+            </div>
+            <li id="sun"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#1f1f1f">
+                        <path
+                            d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+
+
+</body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html.dark{
+        background-color: black;
+        color: white;
+    }
+    .dark .pack a{
+        color: white;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    .pack {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 36px;
+        margin: auto;
+    }
+
+    .undernav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin: auto; */
+    }
+
+    .pack a {
+        text-decoration: none;
+        color: var(--Color-Palete-black-black-500, #555);
+        font-size: calc(14px, 10vw, 32px);
+    }
+
+    .icon a {
+
+        color: #000;
+        /* TH/body/regular/base */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%;
+        /* 23.04px */
+        letter-spacing: 1px;
+        text-decoration: none;
+        
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    .upload {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .upload button {
+        padding: 0.5rem 3rem;
+        display: flex;
+        gap: 10px;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid var(--main-color, #7D84FF);
+        cursor: pointer;
+        border: 1px solid var(--main-color, #7D84FF);
+        background: var(--Color-Palete-General-Purpose-white, #FFF);
+    }
+
+    .upload img {
+        color: #555555;
+        border-radius: 8px;
+        /* border: 0.5px solid var(--Color-Palete-black-black-300, #989898);
+        background: var(--Color-Palete-General-Purpose-white, #FFF);     */
+    }
+
+    .upload p {
+        font-size: 20px;
+        font-weight: 400;
+        font-style: normal;
+        background: linear-gradient(to right, #4A55FF, #C41CFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .cap {
+        background-color: white;
+        border-radius: 8px;
+        border: 2px solid #989898;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        max-width: 50px;
+        padding: 10px;
+        color: black;
+    }
+
+    h1 {
+        font-size: clamp(24px, 5vw, 48px);
+        font-weight: 400;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: clamp(12px, 5vw, 24px);
+        font-weight: 400;
+    }
+
+    .Soundinput {
+        height: auto;
+        background: linear-gradient(90deg, #7D84FF 0%, #D04AFF 100%);
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        align-items: center;
+        margin: 1rem auto;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .Soundinput:hover {
+        background: linear-gradient(90deg, #6c73fc 0%, #c83dfa 100%);
+    }
+
+    .upload button:hover {
+        background-color: #f2f2f2;
+        border: 1px solid #989898;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .result {
+        padding-top: 50px;
+    }
+
+    .sun {
+        background-color: black;
+        color: white;
+    }
+
+    .sun .pack a {
+        color: white;
+    }
+
+    .sun .back {
+        color: white;
+    }
+
+
+    .container-wrapper{
+        display: none;                 /* ซ่อนเมื่อไม่ได้ใช้งาน */
+        position: fixed; inset: 0;     /* เต็มจอเหมือน modal */
+        background: rgba(0,0,0,.35);   /* overlay โปร่งใส */
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-wrapper.show{
+        display: flex;     
+    }
+    .container {
+        width: 349px;
+        height: 393px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        background: var(--Color-Palete-General-Purpose-white, #FFF);
+        border: 2px solid black;
+        padding: 0 2rem;
+    }
+    .container header{
+        color: var(--Color-Palete-black-black-500, #555);
+        text-align: center;
+        /* TH/heading/medium/lg */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 36.4px */
+        letter-spacing: -0.21px;
+        text-align: center;
+        padding-top: 47px;
+    }
+    .container h2{
+        color: var(--Color-Palete-black-black-500, #555);
+        text-align: center;
+        padding-top: 8px;
+        /* TH/heading/regular/sm */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+    }
+    .container #point{
+
+        /* TH/display/medium/2xl */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 78px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 93.6px */
+        letter-spacing: -1.755px;
+        background: linear-gradient(90deg, #7D84FF 0%, #D04AFF 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip:text ;
+    }
+    
+    .container #messager{
+        text-align: center;
+
+        /* TH/heading/regular/m */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 31.2px */
+        letter-spacing: -0.12px;
+        background: linear-gradient(90deg, #7D84FF 0%, #D04AFF 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    }
+    
+    .container .callback{
+        color: var(--Color-Palete-General-Purpose-black, #000);
+        text-align: center;
+
+        /* TH/body/regular/base */
+        font-family: "IBM Plex Sans Thai";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 144%; /* 23.04px */
+        letter-spacing: 1px;
+        padding-top: 21px;
+    }
+
+    .container .button-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 17px;
+    }
+    .container button{
+        border-radius: 12px;
+        border: 0.5px solid var(--Color-Palete-black-black-300, #989898);
+        background: var(--Color-Palete-General-Purpose-white, #FFF);
+        cursor: pointer;
+    }
+    .container .btn-main{
+        display: inline-flex;
+        padding: 8px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .container .btn-ic{
+        display: inline-flex;
+        padding: 8px;
+        align-items: flex-start;
+        gap: 10px;
+        background: linear-gradient(90deg, #7D84FF 0%, #D04AFF 100%);
+    }
+    .container .btn-close{
+        border-radius: 6px;
+        width: 100%;
+        
+    }
+    
+    @media (min-width:1450px){
+        .undernav{
+            height: 50px;
+        }
+        .undernav a{
+            font-size: 1.5rem;
+        }
+    }
+    @media (max-width:480px) {
+        .icon svg {
+            display: none;
+        }
+    }
+</style>
+<script src="page.js">
+
+</script>
+
+
+</html>
